@@ -1,0 +1,43 @@
+version: '3.7'
+services:
+  es:
+    image: elasticsearch:7.17.15
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    ports:
+      - "9200:9200"
+  n4j:
+    image: neo4j:4.4
+
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - NEO4J_AUTH=neo4j/test
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+  mongo:
+    image: mongo:latest
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    ports:
+      - "27017:27017"
+
+  redis:
+    image: redis:latest
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    ports:
+      - "6379:6379"
+
+  postgresql:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: mirea
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "5432:5432"

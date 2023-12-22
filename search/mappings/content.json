@@ -1,0 +1,25 @@
+{
+  "content": {
+    "aliases": {},
+    "mappings": {},
+    "settings": {
+      "index": {
+        "routing": {
+          "allocation": {
+            "include": {
+              "_tier_preference": "data_content"
+            }
+          }
+        },
+        "number_of_shards": "1",
+        "provided_name": "content",
+        "creation_date": "1701705350155",
+        "number_of_replicas": "1",
+        "uuid": "tr6kUSTLQUmrHrBP97TFmQ",
+        "version": {
+          "created": "7171599"
+        }
+      }
+    }
+  }
+}
