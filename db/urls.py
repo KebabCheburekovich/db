@@ -16,12 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from db.views import generator, zadanie_1, zadanie_2, zadanie_3, test
+from db.views import generator, Zadanie1, Zadanie2, Zadanie3, test
 
 urlpatterns = [
     path('g', generator),
     path('test', test),
-    path('z1/<str:search_term>/<int:start_date>/<int:end_date>', zadanie_1),
-    path('z2/<int:semester>/<str:year>/', zadanie_2),
-    path('z3/<str:group_name>/<str:tag_department>/', zadanie_3),
+    path('z1/<str:search_term>/<int:start_date>/<int:end_date>', Zadanie1.as_view()),
+    path('z2/<int:semester>/<str:year>/', Zadanie2.as_view()),
+    path('z3/<str:group_name>/<str:tag_department>/', Zadanie3.as_view()),
 ]

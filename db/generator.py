@@ -1,7 +1,7 @@
 import random
 import subprocess
 import warnings
-from datetime import datetime
+import datetime
 
 # import g4f
 import redis
@@ -75,8 +75,8 @@ def test_p():
 
 
 def gen():
-    last_time = datetime(2020, 9, 6, 0, 0, 0)
-    now_time = datetime.now()
+    last_time = datetime.datetime(2020, 9, 6, 0, 0, 0)
+    now_time = datetime.datetime.now()
 
     def _win_set_time(time):
         dayOfWeek = time.isocalendar()[2]
@@ -207,8 +207,8 @@ def gen():
 
 
 def z1(search_term, start_date, end_date):
-    start_date = datetime(start_date, 1, 1)
-    end_date = datetime(end_date, 1, 1)
+    start_date = datetime.datetime(start_date, 1, 1)
+    end_date = datetime.datetime(end_date, 1, 1)
 
     # Students.objects.create(
     #     first_name=fake.first_name(),
